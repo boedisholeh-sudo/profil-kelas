@@ -45,6 +45,21 @@ nav a:hover::after { transform: scaleX(1); transform-origin: left; }
 .card i { color: var(--primary); font-size: 2.2rem; margin-bottom: 15px; }
 .card h2 { font-size: 1.1rem; margin-bottom: 6px; }
 .card p { color: var(--muted); font-size: .92rem; }
+.structure-map { display: flex; flex-direction: column; gap: 0; }
+.structure-level { display: grid; gap: 22px; margin: 0 auto; width: min(760px, 100%); }
+.structure-level-top { max-width: 390px; }
+.structure-level-leadership, .structure-level-administration { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.structure-card { min-height: 190px; padding: 26px 20px; position: relative; width: 100%; }
+.structure-card .role-label { color: var(--primary-dark); display: block; font-family: 'Baloo 2', sans-serif; font-size: .78rem; font-weight: 800; letter-spacing: .04em; margin-bottom: 10px; text-transform: uppercase; }
+.structure-card i { align-items: center; background: #fff1ec; border-radius: 50%; color: var(--primary); display: inline-flex; font-size: 1.8rem; height: 62px; justify-content: center; margin-bottom: 14px; width: 62px; }
+.structure-card h2 { font-family: 'Baloo 2', sans-serif; font-size: 1.45rem; line-height: 1.1; margin-bottom: 5px; }
+.structure-card p { font-size: .85rem; }
+.structure-level-top .structure-card { background: #fff8d9; }
+.structure-level-top .structure-card i { background: var(--accent); color: var(--ink); }
+.structure-level-administration .structure-card:first-child i { background: #e8f3f1; color: #3e7773; }
+.structure-level-administration .structure-card:last-child i { background: #fff1ec; color: var(--primary); }
+.structure-connector { background: var(--ink); height: 28px; margin: 0 auto; opacity: .45; width: 3px; }
+.structure-connector-short { height: 20px; }
 .student-section + .student-section { margin-top: 72px; }
 .student-section > h2 { align-items: baseline; display: flex; font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.35rem); gap: 12px; justify-content: center; margin-bottom: 28px; }
 .student-section > h2::before, .student-section > h2::after { background: var(--line); content: ''; height: 1px; max-width: 130px; width: 15vw; }
@@ -125,6 +140,8 @@ footer p { animation: rise-in .8s .2s ease both; }
     .page-hero { min-height: 42vh; }
     .container { padding: 65px 20px; }
     .content-grid { gap: 30px; grid-template-columns: 1fr; }
+    .structure-level-leadership, .structure-level-administration { grid-template-columns: 1fr; max-width: 390px; }
+    .structure-card { min-height: 175px; }
     .profile-dialog { padding: 34px 22px 24px; }
     .profile-details div { align-items: flex-start; flex-direction: column; gap: 2px; }
     .profile-details strong { text-align: left; }
