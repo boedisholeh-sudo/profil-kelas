@@ -4,6 +4,7 @@ const profileTitle = document.querySelector('#profile-title');
 const profileCity = document.querySelector('#profile-city');
 const profileInstagram = document.querySelector('#profile-instagram');
 const profileQuote = document.querySelector('#profile-quote');
+const profileStatus = document.querySelector('#profile-status');
 const profilePhoto = document.querySelector('#profile-photo');
 const profileInitials = document.querySelector('#profile-initials');
 let lastFocusedCard;
@@ -15,6 +16,7 @@ function openProfile(card) {
     profileInstagram.textContent = card.dataset.instagram;
     profileQuote.textContent = `“${card.dataset.quote}”`;
     profileInitials.textContent = card.dataset.name.slice(0, 1).toUpperCase();
+    profileStatus.textContent = card.dataset.photo ? 'Foto profil tersedia' : 'Foto belum diunggah';
     profilePhoto.classList.toggle('has-image', Boolean(card.dataset.photo));
     profilePhoto.style.backgroundImage = card.dataset.photo ? `url("${card.dataset.photo}")` : '';
     profileModal.hidden = false;

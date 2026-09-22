@@ -33,7 +33,10 @@
         }
 
         body {
-            background: #fdf8e9;
+            background:
+                radial-gradient(circle at top left, rgba(255, 216, 168, 0.5), transparent 22%),
+                radial-gradient(circle at bottom right, rgba(142, 202, 230, 0.35), transparent 25%),
+                #fdf8e9;
             color: var(--ink);
             line-height: 1.6;
         }
@@ -100,7 +103,7 @@
         .hero {
             min-height: 100vh;
             padding: 140px clamp(20px, 7vw, 110px) 90px;
-            background: linear-gradient(110deg, rgba(27, 96, 161, 0.95) 0%, rgba(38, 132, 190, 0.82) 48%, rgba(24, 81, 145, 0.68) 100%), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=85') no-repeat center center / cover;
+            background: linear-gradient(110deg, rgba(19, 88, 145, 0.92) 0%, rgba(38, 132, 190, 0.84) 45%, rgba(24, 81, 145, 0.76) 100%), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=85') no-repeat center center / cover;
             color: white;
             display: flex;
             justify-content: center;
@@ -109,12 +112,23 @@
             overflow: hidden;
         }
 
+        .hero::before {
+            position: absolute;
+            left: -120px;
+            bottom: -90px;
+            width: 360px;
+            height: 360px;
+            border: 12px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            content: '';
+        }
+
         .hero::after {
             position: absolute;
             right: -110px;
             bottom: -150px;
-            width: 380px;
-            height: 380px;
+            width: 420px;
+            height: 420px;
             border: 1px solid rgba(246, 201, 69, 0.5);
             border-radius: 50%;
             box-shadow: 0 0 0 24px rgba(246, 201, 69, 0.05), 0 0 0 48px rgba(246, 201, 69, 0.04);
@@ -191,10 +205,19 @@
             animation: hero-rise 0.9s 0.2s ease both;
             padding: 28px;
             border: 3px solid rgba(255, 255, 255, 0.8);
-            border-radius: 14px 14px 14px 4px;
-            background: rgba(255, 253, 249, 0.15);
-            box-shadow: 8px 8px 0 rgba(245, 197, 66, .9);
+            border-radius: 18px 18px 18px 6px;
+            background: rgba(255, 253, 249, 0.14);
+            box-shadow: 0 30px 55px rgba(11, 31, 48, 0.22), 8px 8px 0 rgba(245, 197, 66, .9);
             backdrop-filter: blur(14px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::before {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.11), transparent 55%);
+            content: '';
         }
 
         .hero-card-label {
@@ -255,21 +278,25 @@
         }
 
         .btn {
-            display: inline-block;
-            padding: 13px 26px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 28px;
+            border: 2px solid rgba(255, 255, 255, 0.18);
             border-radius: 999px;
-            background: var(--primary);
+            background: linear-gradient(135deg, var(--primary), #f58a68);
             color: white;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
-            box-shadow: 0 10px 24px rgba(217, 99, 79, 0.3);
-            transition: background 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 18px 34px rgba(217, 99, 79, 0.32);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
         }
 
         .btn:hover {
-            background: var(--primary-dark);
-            transform: translateY(-3px);
+            background: linear-gradient(135deg, var(--primary-dark), #d96d4a);
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 22px 40px rgba(217, 99, 79, 0.4);
+            filter: saturate(1.08);
         }
 
         .container {
@@ -493,7 +520,10 @@
                 <div class="eyebrow">Satu cerita, satu keluarga</div>
                 <h1>Selamat Datang di Website Kelas Kami</h1>
                 <p>Kompak, solid, dan bersama menuju sukses. Ruang kecil untuk menyimpan cerita besar XII IPA 1.</p>
-                <a href="tentang.html" class="btn">Kenalan Yuk <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                <div style="display:flex; flex-wrap:wrap; gap:14px; align-items:center;">
+                    <a href="tentang.html" class="btn">Kenalan Yuk <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href="galeri.html" class="btn" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.25); box-shadow:none;">Lihat Kelas</a>
+                </div>
             </div>
             <aside class="hero-card" aria-label="Ringkasan kelas">
                 <div class="hero-card-label">Catatan kelas</div>
@@ -502,7 +532,7 @@
                     <div class="hero-fact"><strong>2026</strong><span>Tahun cerita</span></div>
                     <div class="hero-fact"><strong>XII</strong><span>Tingkat kelas</span></div>
                     <div class="hero-fact"><strong>IPA 1</strong><span>Keluarga kami</span></div>
-                    <div class="hero-fact"><strong>∞</strong><span>Kenangan</span></div>
+                    <div class="hero-fact"><strong>22</strong><span>Teman satu kelas</span></div>
                 </div>
             </aside>
         </div>
