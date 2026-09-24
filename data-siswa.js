@@ -13,7 +13,7 @@ const studentData = {
         city: 'Bandung',
         instagram: 'galihardiansyahh',
         quote: 'Nikmati perjalanan, karena kenangan kelas tidak terulang.',
-        photo: 'assets/foto-siswa/galih.jpg.jpeg'
+        photo: 'assets/foto-siswa/galih.jpg'
     },
     Indra: {
         city: 'Bandung',
@@ -44,13 +44,13 @@ const studentData = {
         city: 'Bandung',
         instagram: 'Belum diisi',
         quote: 'Tetap rendah hati dan terus melangkah.',
-        photo: 'assets/foto-siswa/hilmi.jpg.jpg'
+        photo: 'assets/foto-siswa/hilmi.jpg'
     },
     Panji: {
         city: 'Bandung',
         instagram: 'Belum diisi',
         quote: 'Tetap semangat dan terus melangkah bersama kelas.',
-        photo: 'assets/foto-siswa/panji.jpg.jpg'
+        photo: 'assets/foto-siswa/panji.jpg'
     },
     Fatimah: {
         city: 'Malang',

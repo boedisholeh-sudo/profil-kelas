@@ -9,6 +9,27 @@ const profilePhoto = document.querySelector('#profile-photo');
 const profileInitials = document.querySelector('#profile-initials');
 let lastFocusedCard;
 
+function decorateProfileCards() {
+    const avatarColors = ['#f5c542', '#f8d6ca', '#8ecae6', '#e8f3f1', '#ffd8a8'];
+
+    profileCards.forEach((card, index) => {
+        const data = studentData[card.dataset.name] || {};
+        const avatar = document.createElement('div');
+        avatar.className = 'student-avatar';
+        avatar.setAttribute('aria-hidden', 'true');
+
+        if (data.photo) {
+            avatar.classList.add('has-photo');
+            avatar.style.backgroundImage = `url("${data.photo}")`;
+        } else {
+            avatar.textContent = card.dataset.name.slice(0, 1).toUpperCase();
+            avatar.style.backgroundColor = avatarColors[index % avatarColors.length];
+        }
+
+        card.querySelector('i')?.replaceWith(avatar);
+    });
+}
+
 function openProfile(card) {
     lastFocusedCard = card;
     const data = studentData[card.dataset.name] || card.dataset;
@@ -53,3 +74,5 @@ document.querySelectorAll('[data-close-profile]').forEach((element) => {
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && !profileModal.hidden) closeProfile();
 });
+
+decorateProfileCards();

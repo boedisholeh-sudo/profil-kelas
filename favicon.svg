@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#203c68"/>
+  <path d="M7 43c10-8 17 7 26-1 8-7 15 5 24-1v13H7z" fill="#f5c542"/>
+  <text x="32" y="34" fill="#fffdf5" font-family="Georgia,serif" font-size="18" font-weight="700" text-anchor="middle">XII</text>
+  <text x="32" y="49" fill="#e44d3f" font-family="Arial,sans-serif" font-size="9" font-weight="700" text-anchor="middle">IPA 1</text>
+</svg>
