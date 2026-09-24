@@ -223,6 +223,9 @@ footer p { animation: rise-in .8s .2s ease both; }
 .profile-details div { align-items: center; display: flex; justify-content: space-between; gap: 15px; }
 .profile-details span { color: var(--muted); font-size: .85rem; }
 .profile-details strong { font-size: .9rem; text-align: right; }
+.profile-instagram { color: var(--primary-dark); font-size: .9rem; font-weight: 800; text-align: right; text-decoration: none; }
+.profile-instagram:hover { text-decoration: underline; }
+.profile-instagram.is-empty { color: var(--ink); cursor: default; pointer-events: none; }
 .profile-status {
     background: rgba(245, 197, 66, 0.14);
     border: 1px dashed rgba(32, 60, 104, 0.3);

@@ -11,14 +11,20 @@ let lastFocusedCard;
 
 function openProfile(card) {
     lastFocusedCard = card;
+    const data = studentData[card.dataset.name] || card.dataset;
+    const photo = data.photo || '';
+    const instagram = data.instagram || 'Belum diisi';
+    const instagramUsername = instagram.replace(/^@/, '').trim();
     profileTitle.textContent = card.dataset.name;
-    profileCity.textContent = card.dataset.city;
-    profileInstagram.textContent = card.dataset.instagram;
-    profileQuote.textContent = `“${card.dataset.quote}”`;
+    profileCity.textContent = data.city || 'Belum diisi';
+    profileInstagram.textContent = instagramUsername ? `@${instagramUsername}` : 'Belum diisi';
+    profileInstagram.href = instagramUsername ? `https://www.instagram.com/${encodeURIComponent(instagramUsername)}/` : '#';
+    profileInstagram.classList.toggle('is-empty', !instagramUsername || instagramUsername === 'Belum diisi');
+    profileQuote.textContent = `“${data.quote || 'Kata-kata siswa akan tampil di sini.'}”`;
     profileInitials.textContent = card.dataset.name.slice(0, 1).toUpperCase();
-    profileStatus.textContent = card.dataset.photo ? 'Foto profil tersedia' : 'Foto belum diunggah';
-    profilePhoto.classList.toggle('has-image', Boolean(card.dataset.photo));
-    profilePhoto.style.backgroundImage = card.dataset.photo ? `url("${card.dataset.photo}")` : '';
+    profileStatus.textContent = photo ? 'Foto profil tersedia' : 'Foto belum diunggah';
+    profilePhoto.classList.toggle('has-image', Boolean(photo));
+    profilePhoto.style.backgroundImage = photo ? `url("${photo}")` : '';
     profileModal.hidden = false;
     document.body.classList.add('modal-open');
     profileModal.querySelector('.profile-close').focus();
