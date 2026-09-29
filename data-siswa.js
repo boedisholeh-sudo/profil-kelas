@@ -33,7 +33,8 @@ const studentData = {
     Fasya: {
         city: 'Purwakarta',
         instagram: 'Belum diisi',
-        quote: 'Kebersamaan adalah kekuatan terbaik kelas kita.'
+        quote: 'Kebersamaan adalah kekuatan terbaik kelas kita.',
+        photo: 'assets/foto-siswa/fasya.jpeg'
     },
     Ritchie: {
         city: 'Subang',
@@ -42,7 +43,7 @@ const studentData = {
     },
     Hilmi: {
         city: 'Bandung',
-        instagram: 'Belum diisi',
+        instagram: 'ujngsmsl_',
         quote: 'Tetap rendah hati dan terus melangkah.',
         photo: 'assets/foto-siswa/hilmi.jpg'
     },
@@ -60,12 +61,14 @@ const studentData = {
     Nayla: {
         city: 'Cimahi',
         instagram: 'Belum diisi',
-        quote: 'Jalani hari dengan semangat dan senyuman.'
+        quote: 'Jalani hari dengan semangat dan senyuman.',
+        photo: 'assets/foto-siswa/nayla.jpeg'
     },
     Putri: {
         city: 'Cimahi',
-        instagram: 'Belum diisi',
-        quote: 'Mimpi besar dimulai dari langkah sederhana.'
+        instagram: 'putriadrmd',
+        quote: 'Mimpi besar dimulai dari langkah sederhana.',
+        photo: 'assets/foto-siswa/putri.jpeg'
     },
     Suci: {
         city: 'Bandung',
@@ -73,42 +76,45 @@ const studentData = {
         quote: 'Bersama kita bisa melewati semuanya.'
     },
     Azizah: {
-        city: 'Belum diisi',
+        city: 'Bandung',
         instagram: 'Belum diisi',
-        quote: 'Jadilah versi terbaik dari dirimu sendiri.'
+        quote: 'Jadilah versi terbaik dari dirimu sendiri.',
+        photo: 'assets/foto-siswa/azizah.jpeg'
     },
     Famella: {
-        city: 'Belum diisi',
+        city: 'Bandung',
         instagram: 'Belum diisi',
         quote: 'Simpan kenangan baik, bawa semangatnya.'
     },
     Adinda: {
-        city: 'Belum diisi',
+        city: 'Bandung',
         instagram: 'Belum diisi',
         quote: 'Tidak ada yang tidak mungkin jika dilakukan bersama.'
     },
     Feliya: {
-        city: 'Belum diisi',
-        instagram: 'Belum diisi',
-        quote: 'Terus tumbuh, terus bersinar.'
+        city: 'Bandung',
+        instagram: 'rahmaika_110',
+        quote: 'Terus tumbuh, terus bersinar.',
+        photo: 'assets/foto-siswa/feliya.jpeg'
     },
     Alya: {
-        city: 'Belum diisi',
-        instagram: 'Belum diisi',
-        quote: 'Kebahagiaan sederhana selalu layak dirayakan.'
+        city: 'Bandung',
+        instagram: 'alniiyy',
+        quote: 'Kebahagiaan sederhana selalu layak dirayakan.',
+        photo: 'assets/foto-siswa/alya.jpeg'
     },
     Sherly: {
-        city: 'Belum diisi',
-        instagram: 'Belum diisi',
+        city: 'Bogor',
+        instagram: 'shrly4605',
         quote: 'Berikan yang terbaik untuk setiap kesempatan.'
     },
     Maryam: {
-        city: 'Belum diisi',
+        city: 'Bandung',
         instagram: 'Belum diisi',
         quote: 'Teman seperjuangan adalah hadiah terbaik di sekolah.'
     },
     Fajriany: {
-        city: 'Belum diisi',
+        city: 'Bandung',
         instagram: 'Belum diisi',
         quote: 'Tetap semangat mengejar cita-cita.'
     }
